@@ -21,21 +21,16 @@ class LoginViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let login = loginTextField.text, !login.isEmpty else {
-            showAlert(withTitle: "Error Login", andMessage: "Забыли логин? ну есть же подсказки ;)")
-            return
+        
+        if loginTextField.text == userName &&
+            passwordTextField.text == userPassword {
+            guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+            welcomeVC.welcomeUser = userName
         }
-        guard let password = passwordTextField.text, !password.isEmpty else {
-            showAlert(withTitle: "Error Password", andMessage: "Забыли пароль? ну есть же подсказки ;)")
-            return
+        else {
+            showAlert(withTitle: "Упс!", andMessage: "Неверное имя или пароль, ну есть же подсказки ;)")
         }
         
-        if login != userName || password != userPassword {
-            showAlert(withTitle: "Упс!", andMessage: "Неверное имя или пароль, ну есть же подсказки ;)")
-        } else {
-            guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.welcomeUser = login
-        }
     }
     
     
