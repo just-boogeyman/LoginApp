@@ -21,16 +21,13 @@ class LoginViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if loginTextField.text == userName &&
-            passwordTextField.text == userPassword {
+        if checkLoginPassword() {
             guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
             welcomeVC.welcomeUser = userName
         }
         else {
             showAlert(withTitle: "Упс!", andMessage: "Неверное имя или пароль, ну есть же подсказки ;)")
         }
-        
     }
     
     
@@ -52,12 +49,21 @@ class LoginViewController: UIViewController {
     }
     
     
-    
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         loginTextField.text = ""
         passwordTextField.text = ""
     }
+    
+    
+    
+// MARK: - Private metods
+    
+    private func checkLoginPassword() -> Bool {
+        loginTextField.text == userName &&
+        passwordTextField.text == userPassword
+    }
 }
+
 
 
 // MARK: - UIAlertController
