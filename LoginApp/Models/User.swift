@@ -19,9 +19,6 @@ struct Person {
     let surname: String
     let liveIn: String
     let company: String
-    var fullName: String {
-        name + " " + surname
-    }
 }
 
 
