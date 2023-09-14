@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		048FCD612AB35F0E000A2463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FCD602AB35F0E000A2463 /* AppDelegate.swift */; };
 		048FCD632AB35F0E000A2463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FCD622AB35F0E000A2463 /* SceneDelegate.swift */; };
-		048FCD652AB35F0E000A2463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FCD642AB35F0E000A2463 /* ViewController.swift */; };
+		048FCD652AB35F0E000A2463 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FCD642AB35F0E000A2463 /* LoginViewController.swift */; };
 		048FCD682AB35F0E000A2463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048FCD662AB35F0E000A2463 /* Main.storyboard */; };
 		048FCD6A2AB35F0F000A2463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 048FCD692AB35F0F000A2463 /* Assets.xcassets */; };
 		048FCD6D2AB35F0F000A2463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048FCD6B2AB35F0F000A2463 /* LaunchScreen.storyboard */; };
+		048FCD752AB369E0000A2463 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FCD742AB369E0000A2463 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		048FCD5D2AB35F0E000A2463 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048FCD602AB35F0E000A2463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048FCD622AB35F0E000A2463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		048FCD642AB35F0E000A2463 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		048FCD642AB35F0E000A2463 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		048FCD672AB35F0E000A2463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		048FCD692AB35F0F000A2463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		048FCD6C2AB35F0F000A2463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		048FCD6E2AB35F0F000A2463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		048FCD742AB369E0000A2463 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		048FCD5F2AB35F0E000A2463 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				048FCD602AB35F0E000A2463 /* AppDelegate.swift */,
-				048FCD622AB35F0E000A2463 /* SceneDelegate.swift */,
-				048FCD642AB35F0E000A2463 /* ViewController.swift */,
-				048FCD662AB35F0E000A2463 /* Main.storyboard */,
+				048FCD782AB36A56000A2463 /* App */,
+				048FCD762AB36A1E000A2463 /* ViewControllers */,
+				048FCD772AB36A36000A2463 /* Storyboards */,
 				048FCD692AB35F0F000A2463 /* Assets.xcassets */,
-				048FCD6B2AB35F0F000A2463 /* LaunchScreen.storyboard */,
-				048FCD6E2AB35F0F000A2463 /* Info.plist */,
 			);
 			path = LoginApp;
+			sourceTree = "<group>";
+		};
+		048FCD762AB36A1E000A2463 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				048FCD742AB369E0000A2463 /* WelcomeViewController.swift */,
+				048FCD642AB35F0E000A2463 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		048FCD772AB36A36000A2463 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				048FCD662AB35F0E000A2463 /* Main.storyboard */,
+				048FCD6B2AB35F0F000A2463 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		048FCD782AB36A56000A2463 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				048FCD6E2AB35F0F000A2463 /* Info.plist */,
+				048FCD622AB35F0E000A2463 /* SceneDelegate.swift */,
+				048FCD602AB35F0E000A2463 /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				048FCD652AB35F0E000A2463 /* ViewController.swift in Sources */,
+				048FCD652AB35F0E000A2463 /* LoginViewController.swift in Sources */,
+				048FCD752AB369E0000A2463 /* WelcomeViewController.swift in Sources */,
 				048FCD612AB35F0E000A2463 /* AppDelegate.swift in Sources */,
 				048FCD632AB35F0E000A2463 /* SceneDelegate.swift in Sources */,
 			);
@@ -288,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,9 +329,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "just-boogeyman.LoginApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +346,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LoginApp/Info.plist;
+				INFOPLIST_FILE = LoginApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,9 +359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "just-boogeyman.LoginApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
