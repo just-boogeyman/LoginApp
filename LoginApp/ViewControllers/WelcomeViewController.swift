@@ -8,26 +8,13 @@
 import Foundation
 import UIKit
 
-
 final class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLable: UILabel!
     
-    var name: String!
+    var name = ""
     
     override func viewDidLoad() {
-        configure()
-    }
-    
-    @IBAction func cancelAction() {
-        dismiss(animated: true)
-    }
-}
-
-
-extension WelcomeViewController {
-    private func configure() {
-        guard let fullName = welcomeLable.text else { return }
-        welcomeLable.text = fullName + name
+        welcomeLable.text = "Welcome, \(name)"
     }
 }
