@@ -14,6 +14,7 @@ class AboutMeViewController: UIViewController {
     var aboutMe = ""
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         aboutMeLable.text = aboutMe
     }
 }
