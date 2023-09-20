@@ -13,9 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
-    private let persone = User.getPerson()
-    private let name = User.login
-    private let password = User.password
+    private let user = User.getUserData()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -24,23 +22,24 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewControllers in
             if let welcomeVC = viewControllers as? WelcomeViewController {
-                welcomeVC.name = persone.name
+                welcomeVC.name = user.login
             } else if let navigationVC = viewControllers as? UINavigationController {
                 guard let personeVC = navigationVC.topViewController as? PersoneViewController else { return }
-                personeVC.persone = persone
+                personeVC.persone = user.person
             }
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
 
     //MARK: IBActions
     @IBAction func fotgorPasswodrLogin(_ sender: UIButton) {
         sender.tag == 1
-        ? showAlert(withTitle: "Я подскажу)", andMessage: "Попробуй \(name)")
-        : showAlert(withTitle: "Я подскажу)", andMessage: "Попробуй \(password)")
+        ? showAlert(withTitle: "Я подскажу)", andMessage: "Попробуй \(user.login)")
+        : showAlert(withTitle: "Я подскажу)", andMessage: "Попробуй \(user.password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -73,6 +72,6 @@ private extension LoginViewController {
     }
     
     func getPermission() -> Bool {
-        userNameTF.text == name && passwordTF.text == password
+        userNameTF.text == user.login && passwordTF.text == user.password
     }
 }

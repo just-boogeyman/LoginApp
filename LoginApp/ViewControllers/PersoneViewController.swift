@@ -15,7 +15,6 @@ class PersoneViewController: UIViewController {
     @IBOutlet var mailLable: UILabel!
     @IBOutlet var telegramLable: UILabel!
     
-        
     var persone: Person!
     
     override func viewDidAppear(_ animated: Bool) {
